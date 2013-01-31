@@ -6,11 +6,11 @@ require 'nosql/version'
 Gem::Specification.new do |gem|
   gem.name          = "nosql"
   gem.version       = Nosql::VERSION
-  gem.authors       = ["Robbie Clutton"]
-  gem.email         = ["robert.clutton@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["JT Archie, Robbie Clutton"]
+  gem.email         = [""]
+  gem.description   = %q{A simple ActiveRecord 'adapter' that raises on any call}
+  gem.summary       = %q{A simple ActiveRecord 'adapter' that raises on any call}
+  gem.homepage      = "http://github.com/robb1e/nosql"
 
   gem.add_development_dependency "with_model"
   gem.add_development_dependency "sqlite3"
