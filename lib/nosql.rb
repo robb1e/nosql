@@ -25,9 +25,10 @@ module Nosql
         #cleanup stubbed functions
         connection = ActiveRecord::Base.connection
         EXEC_METHODS.each do |method_name|
-          next unless connection.respond_to?(method_name)
+          original_method_name = "original_#{method_name}"
+          next unless connection.respond_to?(method_name) && connection.respond_to?(original_method_name)
           connection.class_eval do
-            alias_method method_name, "original_#{method_name}"
+            alias_method method_name, original_method_name
           end
         end
       end
