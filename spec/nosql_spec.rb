@@ -1,19 +1,16 @@
 require 'active_record'
-require 'with_model'
 require 'nosql'
 
 ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ':memory:'
+connection = ActiveRecord::Base.connection
+connection.create_table(:posts) do |t|
+  t.string :title
+  t.timestamps
+end
+
+class Post < ActiveRecord::Base; end
 
 describe "With ActiveRecord::Base" do
-  extend WithModel
-
-  with_model :Post do
-    table do |t|
-      t.string :title
-      t.timestamps
-    end
-  end
-
   context "with a real db connection" do
     it "can create a record" do
       expect {

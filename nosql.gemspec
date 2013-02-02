@@ -12,8 +12,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{A simple ActiveRecord 'adapter' that raises on any call}
   gem.homepage      = "http://github.com/robb1e/nosql"
 
-  gem.add_development_dependency "with_model"
   gem.add_development_dependency "sqlite3"
+  gem.add_development_dependency "activerecord"
   gem.add_development_dependency "rspec"
 
   gem.files         = `git ls-files`.split($/)
