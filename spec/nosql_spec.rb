@@ -56,6 +56,12 @@ describe "With ActiveRecord::Base" do
       }.to_not raise_error(Nosql::Error)
     end
 
+    it "can create stub models" do
+      expect {
+        stub_model(:post)
+      }.to_not raise_error(Nosql::Error)
+    end
+
   end
 
   context "with a nosql adapter connection" do
@@ -97,6 +103,11 @@ describe "With ActiveRecord::Base" do
       }.to_not raise_error(Nosql::Error)
     end
 
-  end
+    it "can create stub models" do
+      expect {
+        stub_model(:post)
+      }.to_not raise_error(Nosql::Error)
+    end
 
+  end
 end
