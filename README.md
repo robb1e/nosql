@@ -42,3 +42,8 @@ If you were using RSpec and tagged tests which did hit the datbase with ':db', t
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Authors
+
+* [Robby](https://github.com/robb1e)
+* [JT](https://github.com/jtarchie)
