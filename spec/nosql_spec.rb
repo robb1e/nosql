@@ -22,7 +22,6 @@ describe "With ActiveRecord::Base" do
   context "with a null db connection" do
     before do
       ActiveRecord::Base.connection.stub(:exec).and_raise(Nosql::Error)
-      ActiveRecord::Base.connection.stub(:exec).and_raise(Nosql::Error)
       ActiveRecord::Base.connection.stub(:exec_query).and_raise(Nosql::Error)
     end
 
