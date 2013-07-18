@@ -45,5 +45,5 @@ If you were using RSpec and tagged tests which did hit the datbase with ':db', t
 
 ## Authors
 
-* [Robby](https://github.com/robb1e)
+* [Robbie](https://github.com/robb1e)
 * [JT](https://github.com/jtarchie)
