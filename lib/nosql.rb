@@ -15,7 +15,7 @@ module Nosql
           connection.class_eval do
             alias_method "original_#{method_name}", method_name
             define_method(method_name) do |*args|
-              raise Nosql::Error
+              raise Nosql::Error.new(args)
             end
           end
         end
