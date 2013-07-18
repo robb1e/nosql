@@ -55,7 +55,7 @@ describe "With ActiveRecord::Base" do
       }.to_not raise_error(Nosql::Error)
     end
 
-    it "can create stub models" do
+    xit "can create stub models" do
       expect {
         stub_model(:post)
       }.to_not raise_error(Nosql::Error)
@@ -102,7 +102,7 @@ describe "With ActiveRecord::Base" do
       }.to_not raise_error(Nosql::Error)
     end
 
-    it "can create stub models" do
+    xit "can create stub models" do
       expect {
         stub_model(:post)
       }.to_not raise_error(Nosql::Error)
