@@ -52,13 +52,13 @@ describe "With ActiveRecord::Base" do
     it "can new an instance up" do
       expect {
         Post.new
-      }.to_not raise_error(Nosql::Error)
+      }.to_not raise_error
     end
 
     xit "can create stub models" do
       expect {
         stub_model(:post)
-      }.to_not raise_error(Nosql::Error)
+      }.to_not raise_error
     end
 
   end
@@ -99,13 +99,13 @@ describe "With ActiveRecord::Base" do
     it "can new an instance up" do
       expect {
         Post.new
-      }.to_not raise_error(Nosql::Error)
+      }.to_not raise_error
     end
 
     xit "can create stub models" do
       expect {
         stub_model(:post)
-      }.to_not raise_error(Nosql::Error)
+      }.to_not raise_error
     end
 
   end
