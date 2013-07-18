@@ -11,16 +11,10 @@ end
 class Post < ActiveRecord::Base; end
 
 describe "With ActiveRecord::Base" do
-  context "with a real db connection" do
-    it "can create a record" do
-      expect {
-        Post.create
-      }.to change { Post.count }.by(1)
-    end
-  end
 
   context "with a null db connection" do
     before do
+      Post.first
       ActiveRecord::Base.connection.stub(:exec).and_raise(Nosql::Error)
       ActiveRecord::Base.connection.stub(:exec_query).and_raise(Nosql::Error)
     end
@@ -65,6 +59,7 @@ describe "With ActiveRecord::Base" do
 
   context "with a nosql adapter connection" do
     before do
+      Post.first
       Nosql::Connection.enable!
     end
 
@@ -109,4 +104,13 @@ describe "With ActiveRecord::Base" do
     end
 
   end
+
+  context "with a real db connection" do
+    it "can create a record" do
+      expect {
+        Post.create
+      }.to change { Post.count }.by(1)
+    end
+  end
+
 end
